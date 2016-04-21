@@ -1,0 +1,12 @@
+extends ../modules/layout.jade
+block title
+  title 详情
+block link
+  link(href="/src/css/home/detail.css" rel="stylesheet")
+block con
+  div.contaner#container
+    div.content
+      include:markdown ../../resource/markdown/test.md
+
+block script
+  script(src="/src/js/controller/home/detail.js")

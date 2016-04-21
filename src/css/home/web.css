@@ -1,0 +1,93 @@
+/* 主体内容 */
+.content {
+  padding-top: 20px;
+}
+/*列项*/
+.list-item {
+  width: 100%;
+  height: 120px;
+  padding: 10px 0;
+  border-bottom: 1px dashed  #ccc;
+}
+.list-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #777;
+}
+.item-img {
+  position: relative;
+  top: 5px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.item-img img {
+  width: 100px;
+  height: 100px;
+}
+.item-info {
+  position: relative;
+  left: 30px;
+  width: 700px;
+  float: left;
+}
+.item-info p {
+  margin: 0;
+  padding: 0;
+}
+.item-name {
+  position: relative;
+  top: 5px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #333;
+  font-size: 18px;
+}
+.item-time {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #777;
+}
+.item-info .item-intro {
+  word-wrap: break-word;
+　word-break: normal;
+  padding: 5px 0;
+  font-size: 14px;
+  text-align: justify;
+}
+.item-version {
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  color: #333;
+}
+.sub-header {
+  height: 100px;
+  padding: 0 30px;
+  text-align: center;
+}
+.sub-header a {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0 3px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  color: #777;
+}
+.sub-header a.active,
+.sub-header a:hover {
+  border-bottom: 2px solid #f00;
+}
+.sub-header a span {
+  display: inline-block;
+  margin-left: 5px;
+}

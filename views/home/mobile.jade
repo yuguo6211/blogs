@@ -1,0 +1,25 @@
+extends ../modules/layout.jade
+block title
+  title 移动开发
+block link
+  link(href="/src/css/home/web.css" rel="stylesheet")
+block con
+  div.contaner#container
+    div.sub-header
+      template(v-for="item in weblist")
+        a(v-bind:class="item.active")(href="{{ item.url }}") 
+          i.fa(v-bind:class="item.icon")
+          span(v-cloak) {{ item.name }}
+    div.content
+      div.list-item(v-for="item in itemdata")
+        a(href="javascript:;")
+          div.item-img
+            img(src="{{ item.logo_url }}")
+          div.item-info
+            p.item-name(v-cloak) {{ item.name }}
+              span.item-time(v-cloak) {{ item.time }}
+            p.item-intro(v-cloak) {{ item.intro }}
+            p.item-version(v-cloak) 最新版本号：{{ item.version }}
+
+block script
+  script(src="/src/js/controller/home/mobile.js")

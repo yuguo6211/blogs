@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    block title
+    meta(name="description" content="A simple fast stable and powerfull avatar service" )
+    meta(name="keywords" content="Svpa,avatar,letter avatar" )
+    link(rel="icon" type="image/x-icon" href="/src/images/common/favicon.ico")
+    link(href="/src/css/common/common.css" rel="stylesheet")
+    link(href="/src/css/common/font-awesome.css" rel="stylesheet")
+    block link
+  body
+    header#header
+      div.header.clear
+        div.logo-box
+          img.logo(v-cloak)(src="/src/images/common/logo.png")
+          span hugo-cug
+        ul.header-list.clear
+          template(v-for="item in header")
+            li
+              a(v-cloak)(href="{{ item.url }}") {{ item.name }}
+        ul.login-box
+          li 
+            a(href="javascript:;") 登录
+          li 
+            a(href="javascript:;") 注册
+    block con
+    script(src="/src/lib/jquery.min.js")
+    script(src="/src/lib/vue.js")
+    script(src="/resource/json/data.js")
+    script(src="/src/js/controller/common/common.js")
+    block script
+    footer
+      include ./footer.jade
