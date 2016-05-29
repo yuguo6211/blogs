@@ -5,6 +5,20 @@ block link
   link(href="/src/css/home/detail.css" rel="stylesheet")
 block con
   div.contaner#container
+    div.header-box
+      h1 这里是技术名称
+      p 简单的技术介绍
+      div.website-link
+        a.link-home(href="javascript:;")  
+          i.fa.fa-home
+          span 官网
+
+        a.link-download(href="javascript:;")  
+          i.fa.fa-cloud-download
+
+        a.link-github(href="javascript:;")  
+          i.fa.fa-github
+          span Github
     div.content
       include:markdown ../../resource/markdown/test.md
 

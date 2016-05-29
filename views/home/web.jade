@@ -7,7 +7,7 @@ block con
   div.contaner#container
     div.sub-header
       template(v-for="item in weblist")
-        a(v-bind:class="item.active")(href="{{ item.url }}") 
+        a(v-bind:class="item.active" href="{{ item.url }}") 
           i.fa(v-bind:class="item.icon")
           span(v-cloak) {{ item.name }}
     div.content
