@@ -7,10 +7,10 @@ $(document).ready(function() {
     }
   });
 
-  particlesJS('particles', {
+  /*particlesJS('particles', {
     particles: {
       color: '#000',
-      shape: 'circle', // "circle", "edge" or "triangle"
+      shape: 'circle',
       opacity: 1,
       size: 4,
       size_random: true,
@@ -37,7 +37,7 @@ $(document).ready(function() {
       mouse: {
         distance: 300
       },
-      detect_on: 'canvas', // "canvas" or "window"
+      detect_on: 'canvas', 
       mode: 'grab',
       line_linked: {
         opacity: .5
@@ -45,12 +45,11 @@ $(document).ready(function() {
       events: {
         onclick: {
           enable: true,
-          mode: 'push', // "push" or "remove"
+          mode: 'push',
           nb: 4
         }
       }
     },
-    /* Retina Display Support */
     retina_detect: true
-  });
+  });*/
 });

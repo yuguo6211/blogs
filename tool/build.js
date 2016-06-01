@@ -40,13 +40,13 @@ let build = () => {
   let startTime = Date.now();
   let endTime = Date.now();
   getItems().forEach((item) => {
-    console.log(('[' + item.tip.red + ']' + '开始...'));
+    console.log(('[' + item.tip.green + ']' + '开始...'));
     console.log(item.cmd)
     exec(item.cmd);
     endTime = Date.now();
-    console.log(('[' + item.tip.red  + ']完成，耗时' + showTime(endTime) + '秒'));
+    console.log(('[' + item.tip.green  + ']完成，耗时' + showTime(endTime) + '秒'));
   });
-  console.log('打包结束，共耗时：' + showTime(startTime) + '秒'.red );
+  console.log('打包结束，共耗时：' + showTime(startTime) + '秒'.green );
 }
 
 /**
