@@ -1,0 +1,33 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-family: '微软雅黑';
+}
+.hidden {
+  display: none;
+}
+.left-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #ddd;
+}
+.one-item,
+.two-item,
+.one-item li,
+.two-item li {
+  list-style: none;
+  cursor: pointer;
+}
+.one-item>li,
+.two-item>li {
+  min-height: 40px;
+  line-height: 40px;
+}
+.one-item li a,
+.two-item li a{
+  text-decoration: none;
+}

@@ -2,6 +2,7 @@
 
 let mysql      = require('mysql');
 let connection = '';
+
 const Basic = (sql)=> {
   connection = mysql.createConnection({
     host     : '192.168.1.6',
@@ -27,7 +28,7 @@ function linkDatabase(sql){
         console.log('[query] -:'+err);
         return;
       }
-      //console.log('链接数据库成功');
+      console.log('链接数据库成功');
       resolve(sql)
     });
   })

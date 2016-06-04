@@ -1,0 +1,34 @@
+extends ./layout.jade
+block title
+  title home
+block link
+  link(href="/src/css/admin/index.css" rel="stylesheet")
+block con
+  div.contaner#container
+    div.left-menu
+      ul.one-item
+        li 
+          a(href="javascript:;" v-on:click="subMenu($event)") 1菜单
+          ul.two-item.hidden
+            li 
+              a(href="javascript:;") 1.1菜单
+            li 
+              a(href="javascript:;") 1.2菜单
+            li 
+              a(href="javascript:;") 1.3菜单
+        li
+          a(href="javascript:;" v-on:click="subMenu($event)") 2菜单
+          ul.two-item
+            li 
+              a(href="javascript:;") 2.1菜单
+            li 
+              a(href="javascript:;") 2.2菜单
+        li 
+          a(href="javascript:;" v-on:click="subMenu($event)") 3菜单
+          ul.two-item
+            li 
+              a(href="javascript:;") 3.1菜单
+            li 
+              a(href="javascript:;") 3.2菜单
+block script
+  script(src="/src/js/controller/admin/index.js")
