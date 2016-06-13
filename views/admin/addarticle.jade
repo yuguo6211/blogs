@@ -1,0 +1,66 @@
+extends ./layout.jade
+block title
+  title home
+block link
+  link(href="/src/css/admin/addarticle.css" rel="stylesheet")
+block con
+  div.contaner#container
+    div.left-menu
+      ul.one-item
+        li 
+          a(href="javascript:;" v-on:click="subMenu($event)") 1菜单
+          ul.two-item
+            li 
+              a(href="javascript:;") 1.1菜单
+            li 
+              a(href="javascript:;") 1.2菜单
+            li 
+              a(href="javascript:;") 1.3菜单
+        li
+          a(href="javascript:;" v-on:click="subMenu($event)") 2菜单
+          ul.two-item.hidden
+            li 
+              a(href="javascript:;") 2.1菜单
+            li 
+              a(href="javascript:;") 2.2菜单
+        li 
+          a(href="javascript:;" v-on:click="subMenu($event)") 3菜单
+          ul.two-item.hidden
+            li 
+              a(href="javascript:;") 3.1菜单
+            li 
+              a(href="javascript:;") 3.2菜单
+    div.right-box
+      div.right-container
+        div.input-box
+          label 一级标题
+          input(type="text")
+
+        div.input-box
+          label 二级标题
+          input(type="text")
+
+        div.input-box
+          label 图标
+          input(type="text")
+
+        div.input-box
+          label 主题
+          input(type="text")
+
+        div.input-logo
+          label logo
+          div.upload-img +
+            input.hidden(type="file")
+          div.img-box
+            img(src="")
+
+        div.input-box
+          label 版本号
+          input(type="text")
+
+        div.text-input
+          label 简介
+          textarea(type="text")
+block script
+  script(src="/src/js/controller/admin/addarticle.js")

@@ -5,3 +5,4 @@ require('babel-core/register')({
 });
 
 require('./server.js')
+require('./basic.js')

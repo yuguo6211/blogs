@@ -13,11 +13,36 @@ var vueMvvm = new Vue({
 
 //提交登录信息
 function comfirm() {
-  var username = $('.username').val();
-  var pwd = $('.pwd').val();
-  var arr = $.md5(pwd);
-  console.log(pwd);
-  console.log(arr);
+  var username = $('.username').val().trim();
+  var pwd = $('.pwd').val().trim();
+  if (!username) {
+    alert('用户名不能为空');
+    $('.username').focus();
+    return;
+  }
+  if (!pwd) {
+    alert('密码不能为空');
+    $('.pwd').focus();
+    return;
+  }
+  var data = {
+    username: username,
+    pwd: $.md5(pwd)
+  };
+  $.ajax({
+    type: 'post',
+    url: '/login',
+    data: data,
+    success: function success(e) {
+      if (e.state) {
+        setTimeout(function () {
+          location.href = '/admin/index';
+        }, 1000);
+      } else {
+        alert(e.msg);
+      }
+    }
+  });
 }
 
 particlesJS('bgWraper', {

@@ -13,11 +13,36 @@ let vueMvvm = new Vue({
 
 //提交登录信息
 function comfirm() {
-  let username = $('.username').val();
-  let pwd = $('.pwd').val();
-  let arr = $.md5(pwd);
-  console.log(pwd)
-  console.log(arr)
+  let username = $('.username').val().trim();
+  let pwd = $('.pwd').val().trim();
+  if(!username) {
+    alert('用户名不能为空');
+    $('.username').focus();
+    return ;
+  }
+  if(!pwd) {
+    alert('密码不能为空');
+    $('.pwd').focus();
+    return ;
+  }
+  let data =  {
+    username:username,
+    pwd: $.md5(pwd),
+  };
+  $.ajax({
+    type:'post',
+    url:'/login',
+    data:data,
+    success: function(e) {
+      if(e.state) {
+        setTimeout(()=> {
+          location.href = '/admin/index';
+        },1000)
+      } else {
+        alert(e.msg)
+      }
+    }
+  })
 }
 
 

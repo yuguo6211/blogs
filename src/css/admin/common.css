@@ -15,6 +15,9 @@ html,body{
   height: 100%;
   background-color: #ddd;
 }
+.right-box {
+  padding-left: 200px;
+} 
 .one-item,
 .two-item,
 .one-item li,
