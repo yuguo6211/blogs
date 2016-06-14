@@ -1,0 +1,170 @@
+.contaner {
+  position: relative;
+  width: 1024px;
+  min-height: 600px;
+  margin: 0 auto;
+  background: #fff;
+}
+.title {
+  padding: 10px 0;
+  text-align: center;
+}
+.block-box {
+  padding: 10px;
+}
+.block-box ul,
+.block-box ul li{
+  list-style: none;
+}
+.block-box ul li {
+  width: 120px;
+  height: 140px;
+  margin: 10px;
+  float: left;
+  border: 1px dashed #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.block-box ul li:hover {
+  border: 1px dashed #ccc;
+  background-color: #f4f4f4;
+}
+.block-box ul li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.block-box ul li img{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+.block-box ul li p {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  margin-top: 7px;
+  padding: 4px 15px;
+  font-size: 14px;
+  text-align: center;
+  color: #999 !important;
+}
+.block-box ul li.add-new {
+  text-align: center;
+  line-height: 140px;
+  font-size: 40px;
+  font-weight: bold;
+  border: 1px dashed #ccc;
+}
+.add-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.add-box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+.add-box label {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.close-btn {
+  position: absolute;
+  right: -80px;
+  top: -30px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close-btn:hover {
+  background: rgba(0,0,0,0.9);
+}
+.input-title {
+  display: block;
+  padding: 0 10px;
+  width: 340px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.upload-box {
+  height: 64px;
+}
+.upload-box img {
+  width: 60px;
+  height: 60px;
+}
+.upload-img {
+  position: relative;
+  top: -17px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  border: 1px dashed #ccc;
+  margin: 0 20px;
+  cursor: pointer;
+  color: #ccc;
+}
+.input-intro {
+  margin-left: 20px;
+}
+.input-intro textarea {
+  width: 350px;
+  height: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.firm-btn {
+  height: 40px;
+  margin-top: 30px;
+  text-align: center;
+}
+.firm-btn span {
+  display: inline-block;
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background-color: #58d0a6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.firm-btn span:hover {
+  background-color: #32be77;
+}
+.firm-btn a {
+  display: inline-block;
+  margin-left: 20px;
+}

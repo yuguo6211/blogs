@@ -1,0 +1,46 @@
+extends ./layout.jade
+block title
+  title home
+block link
+  link(href="/src/css/admin/project.css" rel="stylesheet")
+block con
+  div.contaner#container
+    p.title yuguo-test
+    div.block-box 
+      ul 
+        li
+          a(href="javascript:;")
+            img(src="/src/images/admin/logo.jpg")
+            p 测试1
+        li
+          a(href="javascript:;")
+            img(src="/src/images/admin/logo.jpg")
+            p 测试2
+        li
+          a(href="javascript:;")
+            img(src="/src/images/admin/logo.jpg")
+            p 测试3测试3测试3测试3测试3
+        li
+          img(src="/src/images/admin/logo.jpg")
+          p 测试4
+        li.add-new  +
+  div.add-modal.hidden
+    div.add-box.clear
+      span.close-btn.fa.fa-close
+      label 标题
+      div
+        input.input-title(type="text")
+
+      label Logo图片
+      div.upload-box
+        div.upload-img +
+          input.hidden(type="file")
+        img(src="/src/images/admin/logo.jpg")
+      label 简介
+      div.input-intro
+        textarea()
+      div.firm-btn
+        span 提交
+        a(href="javascript:;") 取消
+block script
+  script(src="/src/js/controller/admin/project.js")

@@ -10,6 +10,7 @@ html
     link(href="/src/css/common/font-awesome.css" rel="stylesheet")
     block link
   body
+    //- div#particles
     header#header
       div.header.clear
         div.logo-box
@@ -21,11 +22,12 @@ html
               a(v-cloak)(href="{{ item.url }}") {{ item.name }}
         ul.login-box
           li 
-            a(href="javascript:;") 登录
+            a(href="/admin") 登录
           li 
             a(href="javascript:;") 注册
     block con
     script(src="/src/lib/jquery.min.js")
+    script(src="/src/lib/particles.min.js")
     script(src="/src/lib/vue.js")
     script(src="/resource/json/data.js")
     script(src="/src/js/controller/common/common.js")

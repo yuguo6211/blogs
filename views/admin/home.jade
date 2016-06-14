@@ -1,0 +1,27 @@
+extends ./layout.jade
+block title
+  title home
+block link
+  link(href="/src/css/admin/home.css" rel="stylesheet")
+block con
+  div.contaner#container
+    div.login-box
+      div.login-logo
+        img(src="/src/images/admin/logo.jpg")
+      div.logo-title 
+        p 管理员后台
+      div.input-box
+        span.fa.fa-user
+        input.username(type="text" placeholder="请填写用户名")
+      div.input-box
+        span.fa.fa-key
+        input.pwd(type="password" placeholder="请填写密码")
+      div.hidden
+        input(type="text" placeholder="请填写验证码")
+      div.login-btn
+        span(v-on:click="comfirm()") 登录
+
+block script
+  script(src="/src/lib/particles.min.js")
+  script(src="/src/lib/jquery.md5.js")
+  script(src="/src/js/controller/admin/home.js")
