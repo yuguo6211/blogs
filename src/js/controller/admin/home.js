@@ -36,7 +36,7 @@ function comfirm() {
     success: function(e) {
       if(e.state) {
         setTimeout(()=> {
-          location.href = '/admin/index';
+          location.href = '/admin/project';
         },1000)
       } else {
         alert(e.msg)
