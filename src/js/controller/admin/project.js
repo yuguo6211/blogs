@@ -3,7 +3,7 @@ var vueMvvm = '';
   vueMvvm = new Vue({
     el: '#container',
     data: {
-      proinfo:{}
+      proinfo:{},
     },
     methods: {
       addnew:addnew,
