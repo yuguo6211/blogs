@@ -1,3 +1,32 @@
+.admin-tab-box{
+  width: 1024px;
+  height: 40px;
+  margin: 0 auto;
+}
+.admin-tab-box ul,
+.admin-tab-box ul li{
+  height: 40px;
+  line-height: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.admin-tab-box ul li {
+  width: 100px;
+  text-align: center;
+  float: left;
+}
+.admin-tab-box ul li.active{
+  background: #58d0a6;
+  color: #fff;
+}
+.admin-tab-box ul li a{
+  text-decoration: none;
+  color: #333;
+}
+.admin-tab-box ul li.active a{
+  color: #fff;
+}
 .contaner {
   position: relative;
   width: 1024px;

@@ -4,6 +4,12 @@ block title
 block link
   link(href="/src/css/admin/project.css" rel="stylesheet")
 block con
+  div.admin-tab-box
+    ul
+      li.active
+        a(href="javascript:;") 项目
+      li
+        a(href="javascript:;") 统计
   div.contaner#container
     p.title yuguo-test
     div.block-box 
@@ -23,24 +29,24 @@ block con
         li
           img(src="/src/images/admin/logo.jpg")
           p 测试4
-        li.add-new  +
-  div.add-modal.hidden
-    div.add-box.clear
-      span.close-btn.fa.fa-close
-      label 标题
-      div
-        input.input-title(type="text")
+        li.add-new(v-on:click="addnew()")  +
+    div.add-modal#addmodal.hidden
+      div.add-box.clear
+        span.close-btn.fa.fa-close(v-on:click="closemodal()")
+        label 标题
+        div
+          input.input-title(type="text" v-model="proinfo.name")
 
-      label Logo图片
-      div.upload-box
-        div.upload-img +
-          input.hidden(type="file")
-        img(src="/src/images/admin/logo.jpg")
-      label 简介
-      div.input-intro
-        textarea()
-      div.firm-btn
-        span 提交
-        a(href="javascript:;") 取消
+        label Logo图片
+        div.upload-box
+          div.upload-img +
+            input.hidden(type="file")
+          img(src="/src/images/admin/logo.jpg")
+        label 简介
+        div.input-intro
+          textarea(v-model="proinfo.intro")
+        div.firm-btn
+          span(v-on:click="confirm()") 提交
+          a(href="javascript:;" v-on:click="closemodal()") 取消
 block script
   script(src="/src/js/controller/admin/project.js")

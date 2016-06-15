@@ -1,14 +1,26 @@
+var vueMvvm = '';
 (function() {
-  let vueMvvm = new Vue({
+  vueMvvm = new Vue({
     el: '#container',
     data: {
+      proinfo:{}
     },
     methods: {
       addnew:addnew,
+      closemodal:closemodal,
+      confirm:confirm,
     }
   });
-
-  function addnew(event) {
-    
-  }
 })()
+
+function addnew() {
+  $('#addmodal').fadeIn();
+}
+
+function confirm() {
+  console.log(vueMvvm.proinfo)
+}
+
+function closemodal() {
+  $('#addmodal').fadeOut();
+}
