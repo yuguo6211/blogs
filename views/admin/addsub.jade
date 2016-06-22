@@ -1,0 +1,41 @@
+extends ./layout.jade
+block title
+  title home
+block link
+  link(href="/src/css/admin/addsub.css" rel="stylesheet")
+block con
+  div.contaner#container
+    div.right-box
+      div.right-container
+        div.input-box
+          label 一级标题
+          input(type="text")
+
+        div.input-box
+          label 二级标题
+          input(type="text")
+
+        div.input-box
+          label 图标
+          input(type="text")
+
+        div.input-box
+          label 主题
+          input(type="text")
+
+        div.input-logo
+          label logo
+          div.upload-img +
+            input.hidden(type="file")
+          div.img-box
+            img(src="")
+
+        div.input-box
+          label 版本号
+          input(type="text")
+
+        div.text-input
+          label 简介
+          textarea(type="text")
+block script
+  script(src="/src/js/controller/admin/addsub.js")

@@ -74,3 +74,16 @@
   width: 60px;
   height: 60px;
 }
+.add-subtitle {
+  display: inline-block;
+  position: relative;
+  left: 60px;
+  top: 30px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin-bottom: 30px;
+  text-align: center;
+  border: 1px dotted #ccc;
+  cursor: pointer;
+}

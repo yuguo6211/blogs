@@ -3,7 +3,9 @@
 (function () {
   var vueMvvm = new Vue({
     el: '#container',
-    data: {},
+    data: {
+      itemdata: ItemData
+    },
     methods: {
       subMenu: subMenu
     }

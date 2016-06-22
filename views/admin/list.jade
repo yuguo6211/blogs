@@ -2,10 +2,12 @@ extends ./layout.jade
 block title
   title home
 block link
-  link(href="/src/css/admin/addarticle.css" rel="stylesheet")
+  link(href="/src/css/admin/list.css" rel="stylesheet")
 block con
   div.contaner#container
     div.left-menu
+      span.add-subtitle
+        i.fa.fa-plus
       ul.one-item
         li 
           a(href="javascript:;" v-on:click="subMenu($event)") 1菜单
@@ -31,36 +33,15 @@ block con
             li 
               a(href="javascript:;") 3.2菜单
     div.right-box
-      div.right-container
-        div.input-box
-          label 一级标题
-          input(type="text")
-
-        div.input-box
-          label 二级标题
-          input(type="text")
-
-        div.input-box
-          label 图标
-          input(type="text")
-
-        div.input-box
-          label 主题
-          input(type="text")
-
-        div.input-logo
-          label logo
-          div.upload-img +
-            input.hidden(type="file")
-          div.img-box
-            img(src="")
-
-        div.input-box
-          label 版本号
-          input(type="text")
-
-        div.text-input
-          label 简介
-          textarea(type="text")
+      div.content
+        div.list-item(v-for="item in itemdata")
+          a(href="javascript:;")
+            div.item-img
+              img(src="{{ item.logo_url }}")
+            div.item-info
+              p.item-name(v-cloak) {{ item.name }}
+                span.item-time(v-cloak) {{ item.time }}
+              p.item-intro(v-cloak) {{ item.intro }}
+              p.item-version(v-cloak) 最新版本号：{{ item.version }}
 block script
-  script(src="/src/js/controller/admin/addarticle.js")
+  script(src="/src/js/controller/admin/list.js")

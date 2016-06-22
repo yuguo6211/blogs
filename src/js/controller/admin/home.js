@@ -34,6 +34,7 @@ function comfirm() {
     url:'/login',
     data:data,
     success: function(e) {
+      console.log(e)
       if(e.state) {
         setTimeout(()=> {
           location.href = '/admin/project';

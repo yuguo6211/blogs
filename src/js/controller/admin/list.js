@@ -2,6 +2,7 @@
   let vueMvvm = new Vue({
     el: '#container',
     data: {
+      itemdata: ItemData
     },
     methods: {
       subMenu:subMenu,
